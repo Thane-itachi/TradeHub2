@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TradeHub2 — Timezone Clocks</title>
+  <link rel="stylesheet" href="clock/style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Digital Clocks — Time Zones</h1>
+
+    <div class="controls">
+      <label for="tz-select">Choose timezone:</label>
+      <select id="tz-select" aria-label="Timezone selector"></select>
+
+      <button id="add-btn">Add clock</button>
+
+      <label class="toggle">
+        <input type="checkbox" id="24h-toggle">
+        24-hour
+      </label>
+
+      <button id="clear-btn" title="Remove all clocks">Clear all</button>
+    </div>
+
+    <section id="clocks" class="grid" aria-live="polite">
+      <!-- clocks will be inserted here -->
+    </section>
+
+    <p class="note">Times are calculated using the browser's clock and Intl API.</p>
+  </main>
+
+  <script src="clock/clock.js" defer></script>
+</body>
+</html>
